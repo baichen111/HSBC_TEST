@@ -10,6 +10,7 @@ vwap:{[start;end;s]
     select size wavg price by sym from trades where time within(start;end),sym in s
  }
 
+// TWAP calculation start : start time; end: end time; s: symbol list
 twap:{[start;end;s]
     select (next[time] - time) wavg price by sym from trades where time within(start;end),sym in s
  }
