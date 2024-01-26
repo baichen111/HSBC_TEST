@@ -1,6 +1,4 @@
-// functions to calculate VWAP and TWAP given time range and a list of symbols
--1"USAGE: eg vwap[08:00;09:00;`CSCO`DELL`AAPL]\n\ntwap[08:00;09:00;`CSCO`DELL`AAPL] ";
-
+-1"functions to calculate VWAP and TWAP given time range and a list of symbols\n\nUSAGE: eg vwap[08:00;09:00;`CSCO`DELL`AAPL]\n\ntwap[08:00;09:00;`CSCO`DELL`AAPL] ";
 
 //load csv trades table
 trades:update `g#sym from `time xasc select from ("PSSFI";enlist",") 0: `:trades.csv ;
